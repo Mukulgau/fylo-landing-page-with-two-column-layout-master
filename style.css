@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+  --open-sans: "Open Sans", sans-serif;
+  --raleway: "Raleway", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--open-sans);
+  color: var(--very-dark-blue);
+  font-size: 1.1em;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h4,
+h4 {
+  font-family: var(--raleway);
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.green {
+  color: var(--moderate-cyan);
+}
+
+.container {
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.flex > div,
+.flex > ul {
+  flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 20px;
+}
+.flex > div:last-child {
+  margin-left: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 50px;
+}
+
+nav ul a {
+  font-family: var(--raleway);
+  color: var(--very-dark-blue);
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  border: 1px solid var(--very-dark-blue);
+  border-radius: 2px;
+  flex: 0.7;
+  padding: 15px;
+  font-family: var(--raleway);
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: var(--light-gray);
+}
+
+button {
+  border: 1px solid var(--bright-blue);
+  background-color: var(--bright-blue);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 2px;
+  padding: 15px;
+  flex: 0.3;
+  margin-left: 10px;
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.light-blueish {
+  background-color: var(--light-grayish-blue);
+  padding: 50px 0;
+  margin-top: 100px;
+  position: relative;
+}
+
+.light-blueish::before {
+  content: "";
+  background-image: url("./images/bg-curve-desktop.svg");
+  background-size: cover;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  height: 60px;
+  width: 100%;
+}
+
+.testimonial-box {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.testimonial-box p {
+  letter-spacing: 1px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.user-info {
+  display: flex;
+  margin-top: 20px;
+}
+
+.user-info img {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.user-info h4 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.blueish {
+  background-color: var(--desaturated-blue);
+  color: #fff;
+  padding: 50px 0;
+}
+
+.blueish form {
+  flex-direction: column;
+}
+
+.blueish form input {
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.blueish form button {
+  margin: 20px 0 0;
+  width: 50%;
+}
+
+footer {
+  background-color: var(--very-dark-blue);
+  color: #fff;
+  padding: 50px 0;
+}
+
+footer img {
+  filter: invert(1) sepia(1) saturate(1) hue-rotate(0deg) brightness(5);
+}
+
+footer ul {
+  /* padding: 0; */
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 20px;
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .circle {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  nav {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  nav ul li {
+    margin: 10px 20px;
+  }
+  .light-blueish::before {
+    height: 80px;
+    background-image: url("./images/bg-curve-mobile.svg");
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .flex > div {
+    width: 100%;
+  }
+  .flex > div:first-child {
+    margin-left: 0;
+  }
+  .flex > div:last-child {
+    margin-left: 0;
+  }
+  .testimonial-box {
+    width: 100%;
+  }
+  .blueish form input {
+    flex: 1;
+  }
+  .blueish form button {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .illustration {
+    margin-top: 30px;
+  }
+  .user-info {
+    justify-content: center;
+  }
+  footer ul {
+    padding: 0;
+    width: 100%;
+  }
+}
